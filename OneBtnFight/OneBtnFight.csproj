@@ -1,0 +1,100 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>23</SupportedOSPlatformVersion>
+    <OutputType>Exe</OutputType>
+    <ApplicationId>com.companyname.OneBtnFight</ApplicationId>
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Content\bin\Android\Content\Images\enemy1_bacircle.xnb" />
+    <None Remove="Content\bin\Android\Content\Images\healthbag_bg.xnb" />
+    <None Remove="Content\bin\Android\Content\Images\healthpoint.xnb" />
+    <None Remove="Content\bin\Android\Content\Images\laser.xnb" />
+    <None Remove="Content\bin\Android\Content\Images\laserbeam.xnb" />
+    <None Remove="Content\bin\Android\Content\Images\laserbeam_warning.xnb" />
+    <None Remove="Content\bin\Android\Content\Images\laser_fliped_vertically.xnb" />
+    <None Remove="Content\bin\Android\Content\Images\lost_helthpoint.xnb" />
+    <None Remove="Content\bin\Android\Content\Images\projectile.xnb" />
+    <None Remove="Content\bin\Android\Content\Images\ship.xnb" />
+    <None Remove="Content\Sprites\enemy1_bacircle.xnb" />
+    <None Remove="Content\Sprites\healthpoint.xnb" />
+    <None Remove="Content\Sprites\laser.xnb" />
+    <None Remove="Content\Sprites\laserbeam.xnb" />
+    <None Remove="Content\Sprites\laserbeam_warning.xnb" />
+    <None Remove="Content\Sprites\laser_fliped_vertically.xnb" />
+    <None Remove="Content\Sprites\projectile.xnb" />
+    <None Remove="Content\Sprites\ship.xnb" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Content\bin\Android\Content\Images\enemy1_bacircle.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\Images\healthbag_bg.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\Images\healthpoint.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\Images\laser.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\Images\laserbeam.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\Images\laserbeam_warning.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\Images\laser_fliped_vertically.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\Images\lost_helthpoint.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\Images\projectile.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\bin\Android\Content\Images\ship.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\Sprites\enemy1_bacircle.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\Sprites\healthbar_bg.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\Sprites\healthpoint.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\Sprites\laser.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\Sprites\laserbeam.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\Sprites\laserbeam_warning.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\Sprites\laser_fliped_vertically.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\Sprites\lost_healthpoint.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\Sprites\projectile.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\Sprites\ship.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.2.1105" />
+    <PackageReference Include="MonoGame.Framework.Android" Version="3.8.2.1105" />
+  </ItemGroup>
+  <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
+    <Message Text="Restoring dotnet tools" Importance="High" />
+    <Exec Command="dotnet tool restore" />
+  </Target>
+</Project>
