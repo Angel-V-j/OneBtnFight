@@ -22,13 +22,15 @@ namespace OneBtnFight.Source.GamePlay
         public Ship player;
         public Enemy enemy;
         public List<Attack> attacks = new();
-        public HealthBar healthBar;
+        public PlayerHealthBar playerHealthBar;
+        public EnemyHealthBar enemyHealthBar;
 
         public GamePlayManager()
         {
             enemy = new BACircle(new Vector2(Globals.SCREEN_WIDTH/2, Globals.SCREEN_HEIGHT/2), new Vector2(200, 200));
             player = new Ship(enemy, Vector2.Zero, new Vector2(64, 64));
-            healthBar = new HealthBar(new Vector2(Globals.SCREEN_WIDTH / 2, Globals.SCREEN_HEIGHT), player);
+            playerHealthBar = new PlayerHealthBar(new Vector2(Globals.SCREEN_WIDTH / 2, Globals.SCREEN_HEIGHT), player);
+            enemyHealthBar = new EnemyHealthBar(new Vector2(Globals.SCREEN_WIDTH / 2, 25), new Vector2(Globals.SCREEN_WIDTH, 50), enemy.maxHP);
 
             enemy.SetTarget(player);
             GameGlobals.passAttack = AddAttack;
@@ -47,7 +49,8 @@ namespace OneBtnFight.Source.GamePlay
             }
             enemy.Update();
             player.Update();
-            healthBar.Update(player);
+            playerHealthBar.Update(player);
+            enemyHealthBar.Update(enemy.currentHP);
         }
 
         public void Draw()
@@ -67,7 +70,8 @@ namespace OneBtnFight.Source.GamePlay
             }
             enemy.Draw();
             player.Draw();
-            healthBar.Draw();
+            playerHealthBar.Draw();
+            enemyHealthBar.Draw();
         }
         public virtual void AddAttack(object attack)
         {

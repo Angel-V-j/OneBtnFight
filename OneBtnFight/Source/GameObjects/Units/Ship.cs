@@ -31,7 +31,7 @@ namespace OneBtnFight.Source.GameObjects.Units
             : base(0, "Sprites\\ship", position, dimension, INITIAL_HP, target)
         {
             timer = new GameTimer(BASE_FIRE_RATE_MSec);
-            damage = 1;
+            damage = 10;
             rotationDirection = CLOCKWISE;
             moveSpeed = 0.015f;
             speedMultiplier = 1.1f;

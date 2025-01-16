@@ -24,7 +24,7 @@ namespace OneBtnFight.Source.Engine
             this.dimension = dimension;
 
             try
-            {
+            { 
                 myModel = Globals.content.Load<Texture2D>(path);
             }
             catch (Exception e)

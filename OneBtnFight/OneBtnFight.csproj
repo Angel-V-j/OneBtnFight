@@ -19,6 +19,8 @@
     <None Remove="Content\bin\Android\Content\Images\projectile.xnb" />
     <None Remove="Content\bin\Android\Content\Images\ship.xnb" />
     <None Remove="Content\Sprites\enemy1_bacircle.xnb" />
+    <None Remove="Content\Sprites\enemy_hpbar.xnb" />
+    <None Remove="Content\Sprites\enemy_hpbar_empty.xnb" />
     <None Remove="Content\Sprites\healthpoint.xnb" />
     <None Remove="Content\Sprites\laser.xnb" />
     <None Remove="Content\Sprites\laserbeam.xnb" />
@@ -59,6 +61,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidAsset>
     <AndroidAsset Include="Content\Sprites\enemy1_bacircle.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\Sprites\enemy_hpbar.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Content\Sprites\enemy_hpbar_empty.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidAsset>
     <AndroidAsset Include="Content\Sprites\healthbar_bg.xnb">

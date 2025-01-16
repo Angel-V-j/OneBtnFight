@@ -9,11 +9,10 @@ using System.Threading.Tasks;
 
 namespace OneBtnFight.Source.GameObjects.HealthBar
 {
-    public class HealthBar : GameObject
+    public class PlayerHealthBar : GameObject
     {
         private HealthPoint[] healthPoints;
-        private Queue<HealthPoint> lostHealthPoints = new Queue<HealthPoint>();
-        public HealthBar(Vector2 position, Ship ship) 
+        public PlayerHealthBar(Vector2 position, Ship ship) 
             : base("Sprites\\healthbar_bg", position, new Vector2(Globals.SCREEN_WIDTH, 180 * Globals.SCREEN_WIDTH/400))
         {
             healthPoints = new HealthPoint[(int)ship.maxHP];

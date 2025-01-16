@@ -24,7 +24,7 @@ namespace OneBtnFight.Source.GameObjects.Units
         
         private int timeBetweenAttacks = 8000;
         public BACircle(Vector2 position, Vector2 dimension) 
-            : base(0, "Sprites\\enemy1_bacircle", position, dimension, 10000)
+            : base(0, "Sprites\\enemy1_bacircle", position, dimension, 8000)
         {
             name = "Bad Ass Circle";
             timer = new GameTimer(timeBetweenAttacks);
